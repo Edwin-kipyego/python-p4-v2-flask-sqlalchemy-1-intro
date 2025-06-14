@@ -20,6 +20,10 @@ migrate = Migrate(app, db)
 # initialize the Flask application to use the database
 db.init_app(app)
 
+@app.route('/')
+def index():
+    return '<h1>Flask_SQLAlchemy App is Running</h1>'
+
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
